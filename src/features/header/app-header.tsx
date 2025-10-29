@@ -21,7 +21,7 @@ export function AppHeader() {
   return (
     <header className="sticky h-11 shadow-[inset_0_-1px_0_0_#e2e2e2] z-50 backdrop-blur-xl bg-background/80 px-2">
       <div className="h-full flex items-center justify-between mx-auto gap-15 w-full lg:w-fit">
-        <HeaderLink className="flex" href={"/"}>
+        <HeaderLink href={"/"}>
           <Logo />
         </HeaderLink>
         <HeaderNav categories={categories} />
@@ -29,7 +29,7 @@ export function AppHeader() {
           <div className="h-full flex items-center">
             <Button size={"sm"} variant={"secondary"} asChild>
               <Link href={"/search"}>
-                <Search size={20} strokeWidth={1.7} />
+                <Search size={20} strokeWidth={1.7} className="stroke-2" />
                 <span>Search</span>
               </Link>
             </Button>
