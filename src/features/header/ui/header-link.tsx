@@ -15,7 +15,7 @@ export function HeaderLink({
     <Link
       href={href}
       className={cn(
-        "h-full hidden sm:flex items-center px-3 text-foreground/80 hover:text-foreground transition-[color]",
+        "h-full flex items-center px-3 text-foreground/80 hover:text-foreground transition-[color]",
         isCurrentPath && "text-foreground pointer-events-none",
         className,
       )}

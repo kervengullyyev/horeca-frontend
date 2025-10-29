@@ -6,7 +6,6 @@ import { notFound } from "next/navigation";
 import { routing } from "@/shared/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
 import { AppHeader } from "@/features/header";
-import { Category } from "@/shared/lib/types";
 
 const plusJakarta = Plus_Jakarta_Sans({
   variable: "--font-inter-sans",
@@ -27,17 +26,6 @@ interface Props {
   params: Promise<{ locale: string }>;
 }
 
-const categories: Category[] = [
-  { label: "Spoons1", slug: "/spoons1" },
-  { label: "Spoons2", slug: "/spoons2" },
-  { label: "Spoons3", slug: "/spoons3" },
-  { label: "Spoons4", slug: "/spoons4" },
-  { label: "Spoons5", slug: "/spoons5" },
-  { label: "Spoons6", slug: "/spoons6" },
-  { label: "Spoons7", slug: "/spoons7" },
-  { label: "Spoons8", slug: "/spoons8" },
-]
-
 export default async function RootLayout({ children, params }: Props) {
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) {
@@ -50,7 +38,7 @@ export default async function RootLayout({ children, params }: Props) {
     <html lang={locale}>
       <body className={`${plusJakarta.className} antialiased`}>
         <NextIntlClientProvider>
-          <AppHeader categories={categories} />
+          <AppHeader />
           {children}
           </NextIntlClientProvider>
       </body>
