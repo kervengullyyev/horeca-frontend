@@ -28,11 +28,14 @@ interface Props {
 }
 
 const categories: Category[] = [
-  { label: "Spoons", slug: "/spoons" },
-  { label: "Spoons", slug: "/spoons" },
-  { label: "Spoons", slug: "/spoons" },
-  { label: "Spoons", slug: "/spoons" },
-  { label: "Spoons", slug: "/spoons" },
+  { label: "Spoons1", slug: "/spoons1" },
+  { label: "Spoons2", slug: "/spoons2" },
+  { label: "Spoons3", slug: "/spoons3" },
+  { label: "Spoons4", slug: "/spoons4" },
+  { label: "Spoons5", slug: "/spoons5" },
+  { label: "Spoons6", slug: "/spoons6" },
+  { label: "Spoons7", slug: "/spoons7" },
+  { label: "Spoons8", slug: "/spoons8" },
 ]
 
 export default async function RootLayout({ children, params }: Props) {
