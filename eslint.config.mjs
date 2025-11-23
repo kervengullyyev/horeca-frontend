@@ -14,7 +14,7 @@ const eslintConfig = defineConfig([
     "build/**",
     "next-env.d.ts",
   ]),
-  eslintBoundariesConfig
+  eslintBoundariesConfig,
 ]);
 
 export default eslintConfig;

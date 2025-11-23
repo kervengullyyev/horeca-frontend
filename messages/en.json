@@ -1,5 +1,48 @@
 {
-  "HomePage": {
-    "title": "Hello world!"
+  "Home": {
+    "meta-title": "Welcome to",
+    "meta-description": "Lorem ipsum"
+  },
+  "AboutUs": {
+    "meta-title": "Hello world!",
+    "meta-description": "Lorem ipsum"
+  },
+  "ContactUs": {
+    "meta-title": "Hello world!",
+    "meta-description": "Lorem ipsum"
+  },
+  "Services": {
+    "meta-title": "Hello world!",
+    "meta-description": "Lorem ipsum"
+  },
+  "Checkout": {
+    "entity-type": "Entity type *",
+    "individual": "Individual Person",
+    "company": "Legal Entity / Company",
+    "email": "Email *",
+    "enter-email": ""
+  },
+  "PrivacyPolicy": {
+    "meta-title": "Hello world!",
+    "meta-description": "Lorem ipsum"
+  },
+  "TermsAndConditions": {
+    "meta-title": "Hello world!",
+    "meta-description": "Lorem ipsum"
+  },
+  "Footer": {
+    "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis",
+    "categories": "Categories",
+    "About": {
+      "label": "About",
+      "about-us": "About us",
+      "contact-us": "Contact-us",
+      "services": "Services",
+      "terms-and-comditions": "Terms and Conditions",
+      "privacy-policy": "Privacy Policy"
+    },
+    "contact": "Contact",
+    "copyright": "Copyright © {year} {title}. All rights reserved.",
+    "made-by": "Made by: <company>Bitewi</company>."
   }
 }

@@ -1,30 +1,25 @@
 import { Logo, ShoppingBag } from "@/shared/ui/icons";
 import { Search } from "lucide-react";
 import { HeaderLink } from "./ui/header-link";
-import { Category } from "@/shared/lib/types";
-import { HeaderNav } from "./header-nav";
 import { Button } from "@/shared/ui/kit/button";
 import { Link } from "@/shared/i18n/navigation";
+import { HeaderMenuLink } from "./ui/header-nav-link";
+import { Category } from "@/shared/lib/types";
 
-const categories: Category[] = [
-  { label: "Spoons1", slug: "/spoons1" },
-  { label: "Spoons2", slug: "/spoons2" },
-  { label: "Spoons3", slug: "/spoons3" },
-  { label: "Spoons4", slug: "/spoons4" },
-  { label: "Spoons5", slug: "/spoons5" },
-  { label: "Spoons6", slug: "/spoons6" },
-  { label: "Spoons7", slug: "/spoons7" },
-  { label: "Spoons8", slug: "/spoons8" },
-]
-
-export function AppHeader() {
+export async function AppHeader({ categories }: { categories: Category[] }) {
   return (
-    <header className="sticky h-11 shadow-[inset_0_-1px_0_0_#e2e2e2] z-50 backdrop-blur-xl bg-background/80 px-2">
+    <header className="sticky top-0 h-11 shadow-[inset_0_-1px_0_0_#e2e2e2] z-50 backdrop-blur-xl bg-background/80 px-2">
       <div className="h-full flex items-center justify-between mx-auto gap-15 w-full lg:w-fit">
         <HeaderLink href={"/"}>
           <Logo />
         </HeaderLink>
-        <HeaderNav categories={categories} />
+        <nav className="justify-center h-full gap-6 xl:gap-10 hidden w-full lg:w-fit lg:flex relative">
+          {categories.map((item) => (
+            <HeaderMenuLink key={item.id} href={`/${item.slug}`}>
+              {item.title}
+            </HeaderMenuLink>
+          ))}
+        </nav>
         <div className="h-full flex justify-center">
           <div className="h-full flex items-center">
             <Button size={"sm"} variant={"secondary"} asChild>
@@ -34,7 +29,7 @@ export function AppHeader() {
               </Link>
             </Button>
           </div>
-          <HeaderLink href={"/bag"}>
+          <HeaderLink href={"/cart"}>
             <ShoppingBag />
           </HeaderLink>
         </div>
